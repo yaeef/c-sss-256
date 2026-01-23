@@ -57,6 +57,12 @@ void inicializar_shares(shares *Ss, int n, int k)
     Ss->k = k;
     
     Ss->PRIME_NUMBER = BN_new();
+  
+    if(BN_hex2bn(&(Ss->PRIME_NUMBER), SAFE_PRIME_512) == 0) 
+    {
+        fprintf(stderr, "Error fatal: No se pudo cargar el primo constante :(.\n");
+        exit(1);
+    }
 
     Ss->S = (share *)malloc(n * sizeof(share));
     if (Ss->S == NULL)
@@ -211,12 +217,3 @@ void imprimir_share(share *s)
     OPENSSL_free(hex_y);
 }
 
-void cargar_primo(BIGNUM *p)
-{
-    //Se carga el número primo seguro y es convierte de HEX a BIGNUM
-    if(BN_hex2bn(&p, SAFE_PRIME_512) == 0) 
-    {
-        fprintf(stderr, "Error fatal: No se pudo cargar el primo constante :(.\n");
-        exit(1);
-    }
-}

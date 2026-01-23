@@ -65,7 +65,6 @@ int main(int argc, char **argv)
   inicializar_shares(&Ss, n, k);
 
   printf("+++ Obteniendo el Campo de Galois GF(P)...\n");
-  cargar_primo(Ss.PRIME_NUMBER);
 
   //VALIDACIÓN S<P
   if(BN_cmp(secreto, Ss.PRIME_NUMBER) >= 0)

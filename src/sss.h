@@ -79,7 +79,6 @@ void interpolar_shares(BIGNUM*, shares*, BN_CTX*);
  * La función cargar_primo() toma un número primo seguro y lo convierte 
  * a BIGNUM. Este número fue generado mediante OpenSSL, se creó un script
  * que genera números primos aleatorios de alta entropia de 512 bits.*/
-void cargar_primo(BIGNUM *p);
 void imprimir_share(share*);
 
 
