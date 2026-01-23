@@ -2,7 +2,7 @@
 
 |            |                           |
 | ---------- | ------------------------- |
-| Title:     | c-sss-512 (OpenSSL Engine)|
+| Title:     | c-sss-256 (OpenSSL Engine)|
 | Author:    | Erreguin F. Yair          |
 | Date:      | 2026-01-23                |
 | Copyright: | MIT License               |
@@ -26,7 +26,7 @@ The application is designed as a CLI orchestrator that follows the Unix philosop
 
 To divide a secret, pipe it into the program using the `-s` flag. You must specify the total shares (`-n`) and the threshold (`-k`).
 
-    echo "MySuperSecretKey" | ./sss -s -n 5 -k 3
+    echo "AABBCCDD" | ./sss -s -n 5 -k 3
 
 This will generate 5 files named `share_1.sss` through `share_5.sss`. These files can be distributed among different custodians.
 
@@ -76,7 +76,7 @@ The project is structured for modularity and academic documentation:
 
 ## License ##
 
-The `c-sss-512` project is released under the **MIT License**.
+The `c-sss-256` project is released under the **MIT License**.
 
 Copyright (c) 2026 Erreguin F. Yair
 
