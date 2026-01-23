@@ -75,10 +75,7 @@ void interpolar_shares(BIGNUM*, shares*, BN_CTX*);
 
 /*
  * La funcion imprimir_shares se usó para hacer pruebas de escritorio
- * y debuguear el código.
- * La función cargar_primo() toma un número primo seguro y lo convierte 
- * a BIGNUM. Este número fue generado mediante OpenSSL, se creó un script
- * que genera números primos aleatorios de alta entropia de 512 bits.*/
+ * y debuguear el código.*/
 void imprimir_share(share*);
 
 
