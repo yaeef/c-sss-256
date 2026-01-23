@@ -1,7 +1,7 @@
 /*
  * Autor: Yair Alejandro Erreguin Franco
  * Descripción: Implementación del Esquema de Shamir con OpenSSL y BigNums (512 bits)
- * Dependencias: GF.h (Aritmética de Campos), sss.h (Estructuras)
+ * Dependencias: field.h (Aritmética de Campos), sss.h (Estructuras)
  * Fecha: 29/12/2025
  * .:DEFINICIONES:.
  */
